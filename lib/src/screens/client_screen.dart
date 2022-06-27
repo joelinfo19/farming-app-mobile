@@ -1,4 +1,5 @@
 
+import 'package:farming_app/src/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,8 +18,9 @@ class ClientScreen extends StatelessWidget {
           ),
         ]
       ),
-      body: const Center(
-        child: Text("ClientScreen"),
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (_ , item) => ProductCard(url: 'https://www.quimidroga.com/wp-content/uploads/2018/08/Aceitunas.jpg'), 
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
